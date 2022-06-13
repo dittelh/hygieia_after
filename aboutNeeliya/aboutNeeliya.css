@@ -1,0 +1,277 @@
+@import url("../style.css");
+
+/* Section "Hvem er jeg?" */
+
+#aboutNeeliyaFirstSection h1{
+    text-align: center;
+    margin-top: 40%;
+    font-family: seravek-web, sans-serif;
+    font-style: normal;
+    font-size: 40px;
+}
+
+#aboutText{
+    background-color: #D0F0D2;
+    display: flex;
+    flex-direction: column;
+    font-family: Cormorant;
+    font-size: 20px;
+    padding: 5%;
+    justify-content: center;
+    /* height: 20vw; */
+
+}
+
+#aboutText div, #aboutText p{
+    display: flex;
+    /* text-align: justify; */
+}
+
+
+
+#neeliyaPhoto{
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+
+
+/* Her starter styling af de to tekst box */
+
+.textBoxAbout{
+    box-shadow: 0 0 10px 10px #DBC197;
+    margin: 10%;
+    padding: 5%;
+    border-radius: 7px;
+    border: solid #DBC197;
+    border-width: 4px;
+    margin-top: 15%;
+    /* text-align: justify;
+    text-justify: inter-word; */
+}
+
+.firstBox{
+    margin-top: 25%;
+}
+
+.textBoxAbout h1{
+    text-align: center;
+    font-family: seravek-web, sans-serif;
+    font-weight: 100;
+    font-size: 35px;
+}
+
+.textBoxAbout p{
+    font-family: Cormorant;
+    font-size: 20px;
+}
+
+
+
+/* Why choose me? Section */
+
+#whyChooseMe{
+    margin: 10%;
+}
+
+#whyChooseMe h1{
+    text-align: center;
+    font-family: seravek-web, sans-serif;
+    font-style: normal;
+    font-size: 35px;
+    margin-top: 25%;
+}
+
+.pointIcon{
+    width: 10%;
+}
+
+.pointsLeft{
+    display: flex;
+}
+
+.pointsLeft p{
+    font-family: Cormorant;
+    font-size: 20px;
+    margin-left: 5%;
+    
+}
+
+.pointsRight{
+    display: flex;
+
+}
+
+.pointsRight p{
+    font-family: Cormorant;
+    font-size: 20px;
+    text-align: right;
+    margin-right: 5%;
+}
+
+.lastChooseMe{
+    margin-bottom: 5%;
+}
+
+
+
+/* Styling af billede/gif */
+
+#photoSection{
+    display: flex;
+    height: 100vw;
+}
+
+#neeliyaWorking{
+    width: 50%;
+    object-fit: cover;
+}
+
+#twoImgDiv{
+    font-size: 0;
+}
+
+.smallImgs{
+    width: 100%;
+    height: 50%;
+}
+
+
+
+@media screen and (min-width: 992px) {
+    /* Section "Hvem er jeg?" */
+
+    #aboutNeeliyaFirstSection h1{
+        margin-top: 15%;
+        font-size: 70px;
+    }
+
+    #aboutText{
+        font-size: 25px;
+        padding: 1%;
+        padding-left: 5%;
+        padding-top: 1%;
+        height: 25vw;
+        position: relative;
+    }
+
+    #aboutText div, #aboutText p{
+        width: 65vw;
+    }
+
+    #neeliyaPhoto{
+        width: 20vw;
+        height: 20vw;
+        position: absolute;
+        right: 5%;
+        bottom: 15%;
+    }
+
+
+    /* Her starter styling af de to tekst box */
+
+    #textSectionAbout{
+        display: flex;
+        margin-top: 15%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .textBoxAbout{
+        margin: 0% 3%;
+        padding: 5%;
+        margin-top: 0%;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .firstBox{
+        margin-top: 0%;
+    }
+
+    .textBoxAbout h1{
+        font-size: 35px;
+    }
+
+    .textBoxAbout p{
+        font-size: 25px;
+    }
+
+
+    /* Why choose me? Section */
+
+    #whyChooseMe{
+        margin: 0%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15%;
+    }
+
+    #whyChooseMe h1{
+        font-size: 35px;
+        margin-top: 0%;
+    }
+
+    .pointIcon{
+        width: 3%;
+    }
+
+    .pointsLeft{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pointsRight{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pointsLeft p{
+        font-size: 25px;
+        margin-left: 2%;
+    }
+
+    .pointsRight p{
+        font-size: 25px;
+        text-align: unset;
+        margin-right: 2%;
+    }
+
+
+    /* Styling af billede/gif */
+
+
+    #photoSection{
+        display: flex;
+        height: 100%;
+        margin-top: 15%;
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #neeliyaWorking{
+        width: 50%;
+        object-fit: cover;
+    }
+    
+    #twoImgDiv{
+        font-size: 0;
+    }
+    
+    .smallImgs{
+        width: 100%;
+        height: 50%;
+    }
+
+
+}

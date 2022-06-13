@@ -1,0 +1,514 @@
+@import url("style.css");
+
+
+
+/* The first banner styling */
+
+#firstSection{
+    background-color: #4D987D;
+    margin-top: 40%;
+    color: white;
+    text-align: right;
+    height: 80vw;
+    position: relative;
+}
+
+#firstSectionPhoto{
+    width: 75%;
+    position: absolute;
+    left: -15%;
+    bottom: 0;
+}
+
+#firstSection h1{
+    font-family: seravek-web, sans-serif;
+    font-style: normal;
+    font-size: 8vw;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    padding-top: 3%;
+    margin-left: 40%;
+    position: absolute;
+    right: 0;
+    top: 0%;
+}
+
+#firstSection p{
+    font-family: seravek-web, sans-serif;
+    font-style: normal;
+    font-size: 5vw;
+    position: absolute;
+    right: 2%;
+    top: 45%;
+}
+
+.btnFirstSection{
+    margin-right: 5%;
+    position: absolute;
+    right: 0;
+    bottom: 15%;
+}
+
+
+
+/* The first textbox - Hvad er en kostervejleder + hvad kan jeg gøre... */
+
+#textBoxFirstSection{
+    margin: 10%;
+    margin-top: 25%;
+    border-radius: 7px;
+    padding: 5%;
+    box-shadow: 0 0 10px 10px #DBC197;
+}
+
+#textBoxFirstSection h2{
+    font-family: seravek-web, sans-serif;
+    font-style: normal;
+    font-size: 25px;
+}
+
+#textBoxFirstSection p{
+    font-family: Cormorant;
+    font-size: 20px;
+}
+
+
+
+/* Package test section */
+
+#testSection{
+    background-color: #D0F0D2;
+    text-align: center;
+    padding: 5%;
+    padding-bottom: 10%;
+    margin-top: 25%;
+}
+
+#testSection h2{
+    font-family: seravek-web, sans-serif;
+    font-style: normal;
+    font-size: 25px;
+}
+
+#testSection p{
+    font-family: Cormorant;
+    font-size: 20px;
+}
+
+
+
+/* About the different packages */
+
+#packageH2{
+    font-family: seravek-web, sans-serif;
+    font-style: normal;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 25%;
+}
+
+.packageBox{
+    background-color: #E6F2E6;
+    text-align: center;
+    margin: 10%; 
+    border-radius: 7px;
+    border: solid #DBC197;
+    border-width: 2px;
+    padding-bottom: 10%;
+}
+
+.packageBox h3{
+    font-family: seravek-web, sans-serif;
+    font-weight: 100;
+    font-size: 25px;
+}
+
+.pointPackageSection{
+    display: flex;
+    font-family: Cormorant;
+    font-size: 20px;
+    padding: 0 8%; 
+    justify-content: center;
+}
+
+.packagePoint{
+    width: 10%;
+    padding-right: 5%;
+}
+
+
+
+/* Instagram post section */
+
+#instaSection{
+    text-align: center;
+    margin-top: 25%;
+}
+
+#instaIconSection{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-bottom: 0%;
+    width: 10vw;
+    height: 10vw;
+}
+
+#instaSection h2{ 
+    font-family: Cormorant;
+    font-size: 25px;
+    font-weight: 100;
+    margin-bottom: 2px;
+    margin-top: 2%;
+}
+
+#bigHygieiaSome{ 
+    font-family: Cormorant;
+    font-size: 35px !important;
+    font-weight: 100;
+    margin-top: 0;
+}
+
+#feedContainer{
+    font-size: 0;
+    margin-top: 2%;
+}
+
+.instaA:hover{
+    cursor: pointer;
+}
+
+#feedContainer a:nth-child(7),
+#feedContainer a:nth-child(8),
+#feedContainer a:nth-child(9),
+#feedContainer a:nth-child(10){
+    display: none;
+} 
+
+
+.instaImg{
+    width: 33.33%;
+    height: 33.33vw;
+    object-fit: cover;
+    margin: 0;
+}
+
+
+
+/* Client Statement styling */
+
+#lastSection h2{
+    text-align: center;
+    font-family: seravek-web, sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    margin-top: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.clientStatementAllBox{
+    display: flex;
+    margin: 5%;
+    align-items: center;
+}
+
+.clientStatementBox{
+    background-color: #E6F2E6;
+    padding: 5%;
+    border-radius: 7px;
+    border: solid #DBC197;
+    border-width: 2px;
+    font-family: Cormorant;
+    height: 70vw;
+    width: 100vw;
+    position: relative;
+}
+
+.photoNameSection{
+    display: flex;
+    justify-content: center;
+}
+
+.clientPhoto{
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    left: 10%;
+}
+
+.clientFacts{
+    position: absolute;
+    right: 10%;
+    font-size: 4.5vw;
+}
+
+.clientText{
+    position: absolute;
+    bottom: 10%;
+    padding: 5%;
+    font-size: 4.5vw;
+    margin: 0;
+}
+
+#arrowBack{
+    transform: rotate(-90deg);
+    width: 7%;
+    height: 7%;
+    cursor: pointer;
+}
+
+#arrowNext{
+    transform: rotate(90deg);
+    width: 7%;
+    height: 7%;
+    cursor: pointer;
+}
+
+.clientSection{
+    display: none;
+    -webkit-animation: fadein 1s;
+       -moz-animation: fadein 1s;
+        -ms-animation: fadein 1s;
+         -o-animation: fadein 1s;
+            animation: fadein 1s;
+}
+
+.clientActive{
+    display: block;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+@media screen and (min-width: 992px) {
+
+    /* The first banner styling */
+
+    #firstSection{
+        background-color: #4D987D;
+        margin-top: 15%;
+        text-align: right;
+        height: 27vw;
+    }
+
+    #firstSectionPhoto{
+        width: 33%;
+        left: 0;
+    }
+
+    #firstSection h1{
+        font-size: 4vw;
+        margin-bottom: 5%;
+        margin-right: 5%;
+        padding-top: 3%;
+        margin-left: 20%;
+        position: absolute;
+        right: 0;
+        top: 0%;
+    }
+
+    #firstSection p{
+        font-size: 2vw;
+        position: absolute;
+        right: 28%;
+        top: 35%;
+    }
+
+    .btnFirstSection{
+        margin-right: 5%;
+        position: absolute;
+        right: 25%;
+        bottom: 20%;
+    }
+
+
+    /* The first textbox - Hvad er en kostervejleder + hvad kan jeg gøre... */
+
+    #textBoxFirstSection{
+        margin: 15%;
+    }
+
+    #textBoxFirstSection h2{
+        font-size: 35px;
+    }
+
+    #textBoxFirstSection p{
+        font-size: 25px;
+    }
+
+
+    /* Package test section */
+
+    #testSection{
+        margin-top: 15%;
+        padding: 5%;
+        padding-bottom: 5%;
+    }
+
+    #testSection h2{
+        font-size: 55px;
+        margin-top: 0%;
+    }
+
+    #testSection p{
+        font-size: 25px;
+    }
+
+
+    /*  About the different packages */
+
+    #packageH2{
+        font-size: 55px;
+        margin-top: 15%;
+    }
+
+    #packageSection{
+        display: flex;
+        justify-content: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .packageBox{
+        margin: 2%; 
+        border-width: 4px;
+        padding-bottom: 5%;
+        width: 30vw;
+    }
+
+    .packageBox h3{
+        font-size: 35px;
+    }
+
+    .pointPackageSection{
+        font-size: 25px;
+    }
+
+    .packageBtn{
+        margin-top: 10%;
+    }
+
+
+    /* Instagram post section */
+
+    #instaSection{
+        margin-top: 15%;
+    }
+
+    #instaIconSection{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    #instaSection h2{ 
+        font-size: 40px;
+    }
+
+    #bigHygieiaSome{ 
+        font-size: 55px !important;
+    }
+
+    #feedContainer{
+        font-size: 0;
+    }
+
+    .instaImg{
+        width: 20%;
+        height: 20vw;
+        object-fit: cover;
+    }
+
+    #feedContainer a:nth-child(7),
+    #feedContainer a:nth-child(8),
+    #feedContainer a:nth-child(9),
+    #feedContainer a:nth-child(10){
+    display: unset;
+    } 
+
+
+
+    /* Client Statement styling */
+
+    #lastSection h2{
+        font-size: 55px;
+        margin-top: 15%;
+    }
+
+    .clientStatementBox{
+        border-width: 4px;
+        font-family: Cormorant;
+        height: 20vw;
+        width: 50vw;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .clientStatementAllBox{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .photoNameSection{
+        display: flex;
+        justify-content: center;
+    }
+
+    .clientPhoto{
+        border-radius: 50%;
+        width: 10vw;
+        height: 10vw;
+        position: absolute;
+        left: 15%;
+    }
+
+    .clientFacts{
+        position: absolute;
+        right: 40%;
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .clientText{
+        position: absolute;
+        bottom: 10%;
+        padding: 5%;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    #arrowBack{
+        width: 3%;
+        height: 3%;
+    }
+
+    #arrowNext{
+        width: 3%;
+        height: 3%;
+    }
+
+
+
+}
+
+
