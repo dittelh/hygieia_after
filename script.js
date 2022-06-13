@@ -115,3 +115,17 @@ function handleInstagramFeed(instagramFeed) {
     }
   }
 }
+
+
+
+
+
+// Pop up bokse
+
+function openSundhed() {
+  // Fjerner eller tilføjer en class, ved at toggle
+  var popBox = document.getElementById("sundhedBox")
+  popBox.classList.toggle("popBox")
+  
+
+}
