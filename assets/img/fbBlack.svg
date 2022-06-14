@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_6" data-name="Ellipse 6" cx="40" cy="40" r="40" transform="translate(1520 6089.011)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_6" data-name="Mask Group 6" transform="translate(-1520 -6089.011)" clip-path="url(#clip-path)">
+    <path id="facebook-brands" d="M81.969,41.967a40,40,0,1,0-46.251,39.52V53.531H25.557V41.967H35.718V33.154c0-10.025,5.968-15.563,15.108-15.563a61.55,61.55,0,0,1,8.955.781v9.84H54.737c-4.968,0-6.517,3.084-6.517,6.247v7.508H59.313L57.538,53.531h-9.32V81.487a40.017,40.017,0,0,0,33.751-39.52Z" transform="translate(1518.031 6087.281)"/>
+  </g>
+</svg>
