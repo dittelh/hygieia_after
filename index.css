@@ -72,6 +72,9 @@
     font-size: 20px;
 }
 
+
+/* Pop up bokse */
+
 .linkText{
     color: #4D987D;
     text-decoration: underline;
@@ -454,6 +457,64 @@
 
     #textBoxFirstSection p{
         font-size: 25px;
+    }
+
+
+    /* Pop up bokse */
+
+    #sundhedBox{
+        border-width: 4px;
+        top: 5%;
+    }
+
+    #ernaringBox{
+        border-width: 4px;
+        top: 5%;
+    }
+
+    #motionBox{
+        border-width: 4px;
+        top: 5%;
+    }
+
+    #skraddersyetBox{
+        border-width: 4px;
+        top: 5%;
+    }
+
+    .popBoxh1{
+        font-size: 35px;
+        margin-top: 1%;
+    }
+
+    .popBoxP{
+        font-size: 25px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
+
+    .popBoxUl{
+        font-size: 25px; 
+    }
+
+    .closeIcon{
+        width: 5vw;
+        height: 5vw;
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+
+    .pointIconPopBox{
+        width: 5vw;
+        height: 5vw;
+        position: absolute;
+        right: -3vw;
+        top: -3vw;
+    }
+
+    .popBox{
+        display: none !important;
     }
 
 
