@@ -87,7 +87,40 @@
     border: solid #DBC197;
     border-width: 2px;
     position: fixed;
-    top: 20%;
+    top: 15%;
+    left: 0%;
+    background-color: white;
+}
+
+#ernaringBox{
+    margin: 10%;
+    border-radius: 7px;
+    border: solid #DBC197;
+    border-width: 2px;
+    position: fixed;
+    top: 15%;
+    left: 0%;
+    background-color: white;
+}
+
+#motionBox{
+    margin: 10%;
+    border-radius: 7px;
+    border: solid #DBC197;
+    border-width: 2px;
+    position: fixed;
+    top: 15%;
+    left: 0%;
+    background-color: white;
+}
+
+#skraddersyetBox{
+    margin: 10%;
+    border-radius: 7px;
+    border: solid #DBC197;
+    border-width: 2px;
+    position: fixed;
+    top: 15%;
     left: 0%;
     background-color: white;
 }
@@ -96,6 +129,26 @@
 
 
 
+.popBoxh1{
+    font-family: seravek-web, sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    color: #74CA98;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.popBoxP{
+    font-family: Cormorant;
+    font-size: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.popBoxUl{
+    font-family: Cormorant;
+    font-size: 20px; 
+}
 
 .closeIcon{
     width: 10vw;
@@ -115,6 +168,10 @@
 .popBox{
     display: none !important;
 }
+
+.blur{
+    filter: blur(5px);
+  }
 
 
 /* Package test section */

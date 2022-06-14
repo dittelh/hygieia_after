@@ -125,7 +125,43 @@ function handleInstagramFeed(instagramFeed) {
 function openSundhed() {
   // Fjerner eller tilføjer en class, ved at toggle
   var popBox = document.getElementById("sundhedBox")
-  popBox.classList.toggle("popBox")
-  
+  let blurBoxes = document.getElementsByClassName('popUpBlur');
 
+  popBox.classList.toggle("popBox")
+  for (let i = 0; i < blurBoxes.length; i++) {
+    blurBoxes[i].classList.toggle('blur');
+  }
+}
+
+function openErnaring() {
+  // Fjerner eller tilføjer en class, ved at toggle
+  var popBox = document.getElementById("ernaringBox");
+  let blurBoxes = document.getElementsByClassName('popUpBlur');
+
+  popBox.classList.toggle("popBox")
+  for (let i = 0; i < blurBoxes.length; i++) {
+    blurBoxes[i].classList.toggle('blur');
+  }
+}
+
+function openMotion() {
+  // Fjerner eller tilføjer en class, ved at toggle
+  var popBox = document.getElementById("motionBox");
+  let blurBoxes = document.getElementsByClassName('popUpBlur');
+
+  popBox.classList.toggle("popBox")
+  for (let i = 0; i < blurBoxes.length; i++) {
+    blurBoxes[i].classList.toggle('blur');
+  }
+}
+
+function openSkraddersyet() {
+  // Fjerner eller tilføjer en class, ved at toggle
+  var popBox = document.getElementById("skraddersyetBox");
+  let blurBoxes = document.getElementsByClassName('popUpBlur');
+
+  popBox.classList.toggle("popBox")
+  for (let i = 0; i < blurBoxes.length; i++) {
+    blurBoxes[i].classList.toggle('blur');
+  }
 }

@@ -20,7 +20,7 @@
     <link rel="icon" type="image/x-icon" href="assets/img/punkt.svg">
 </head>
 <body>
-    <header>
+    <header class="popUpBlur">
         <nav id="headerIcons">
             <a id="aLogo" href="index.html">
                 <img id="logo" src="assets/img/favorite.svg" alt="Hygieias logo">
@@ -48,25 +48,25 @@
             <a href="faq/faq.html">FAQ</a>
         </nav>
     </header>
-    <section id="firstSection">
+    <section id="firstSection" class="popUpBlur">
         <img id="firstSectionPhoto" src="assets/img/neeliya2.png" alt="Neeliya billede">
         <h1>"Ord tæller ikke uden handling!"</h1>
         <p>-Neeliya, kostvejleder</p>
         <a class="btn btnFirstSection" href="contact/contact.html">Kontakt mig</a>
     </section>
-    <div id="textBoxFirstSection">
+    <div id="textBoxFirstSection" class="popUpBlur">
         <section>
             <h2>Hvad er en kostvejleder?</h2>
             <p>
                 Som kostvejleder har man 
                 gennemgået en uddannelse 
-                indenfor <span onclick="openSundhed()" class="linkText">sundhed</span>, <span class="linkText">ernæring</span> og 
-                <span class="linkText">motion</span>. Kostvejlederen er til for 
+                indenfor <span onclick="openSundhed()" class="linkText">sundhed</span>, <span onclick="openErnaring()" class="linkText">ernæring</span> og 
+                <span onclick="openMotion()" class="linkText">motion</span>. Kostvejlederen er til for 
                 at hjælpe og guide dig på rette 
                 vej igen. 
             </p>
         </section>
-        <section>
+        <section class="popUpBlur">
             <h2>Hvad kan jeg gøre for dig?</h2>
             <p>
                 Hvad end du vil tabe dig, tage 
@@ -74,14 +74,14 @@
                 noget helt fjerde, så kan du tage 
                 fat i mig. Jeg vil bl.a. kigge på din 
                 kost og hverdag, så jeg kan 
-                lave en skræddersyet plan til dig, 
+                lave en <span onclick="openSkraddersyet()" class="linkText">skræddersyet</span> plan til dig, 
                 så vi sammen kan ændre de dårlige 
                 vaner til sunde vaner på en måde, 
                 som passer ind i dine behov.
             </p>
         </section>
     </div>
-    <section id="testSection">
+    <section id="testSection" class="popUpBlur">
         <h2>Forløbstest</h2>
         <p>Her kan du udfylde en test så du nemt og hurtigt kan få hjælp til, at finde det rette forløb. </p>
         <a class="btn" href="packageTest/packageTest.html">Tag testen</a>
@@ -171,6 +171,7 @@
             <img id="arrowNext" src="assets/img/arrow.svg" onclick="nextClient()" alt="Pil ikon">
         </div>
     </section>
+    <!-- Afsnit til pop up boksene, bliver ikke vist, medmindre der klikkes -->
     <div id="sundhedBox" class="popBox">
         <img onclick="openSundhed()" class="closeIcon" src="assets/img/close.svg" alt="Lukke ikon">
         <img class="pointIconPopBox" src="assets/img/punkt.svg" alt="Blad ikon">
@@ -181,6 +182,60 @@
                 Når man taler om sundhed, så opdeler man det typisk i to kategorier - den fysiske og den mentale.</p>
             <p class="popBoxP">Fysisk sundhed handler om, at have en sund krop. Hvordan man sørger for at holde sin krop sund og den følelse man får, når man indtager det rigtige. </p>
             <p class="popBoxP">Mental sundhed handler om ens sind og ens følelsesmæssige tilstand. Når du er fysisk sundhed, så handler det om at opbygge det mentale, så du bliver glad, for overskud, har lyst til ting mm. </p>
+        </section>
+    </div>
+    <div id="ernaringBox" class="popBox">
+        <img onclick="openErnaring()" class="closeIcon" src="assets/img/close.svg" alt="Lukke ikon">
+        <img class="pointIconPopBox" src="assets/img/punkt.svg" alt="Blad ikon">
+        <section>
+            <h1 class="popBoxh1">Ernæring</h1>
+            <p class="popBoxP">De officelle 7 kostråd er til for, at man får alle de næringsstoffer man har brug for. På den måde kan du holde dig sund og rask. </p>
+            <p class="popBoxP">De 7 kostråd:</p>
+            <ul class="popBoxUl">
+                <li>Spis planterigt, varieret og ikke for meget</li>
+                <li>Spis flere grøntsager og frugter</li>
+                <li>Spis mindre kød – vælg bælgfrugter og fisk</li>
+                <li>Spis mad med fuldkorn</li>
+                <li>Vælg planteolier og magre mejeriprodukter</li>
+                <li>Spis mindre af det søde, salte og fede</li>
+                <li>Sluk tørsten i vand</li>
+            </ul>
+            <p class="popBoxP">
+                Hvis man følger de ovenstående råd, vil man få dækket alle de vitaminer, mineraler og næringstoffer som kroppen har brug for. 
+                Derudover vil man også nedsætte risikoen for sygdomme som bl.a. hjertekarsygdomme, diabetes og meget mere.  
+            </p>
+        </section>
+    </div>
+    <div id="motionBox" class="popBox">
+        <img onclick="openMotion()" class="closeIcon" src="assets/img/close.svg" alt="Lukke ikon">
+        <img class="pointIconPopBox" src="assets/img/punkt.svg" alt="Blad ikon">
+        <section>
+            <h1 class="popBoxh1">Motion</h1>
+            <p class="popBoxP">
+                Det er selvfølgelig også en god idé, at dyrke noget motion.
+                Regelmæssig motion forbedrer din sundhed og velvære. Derudover kan det øge din levealder.
+            </p>
+            <p class="popBoxP">
+                Det er meget individuelt hvor meget man skal motionere om dagen, men der anbefales i hvert fald 30 min om dagen. 
+                Det kan være løb, en gåtur, sving med støvsugeren eller en tur i fitness. 
+                Det vigtigste er, at pulsen kommer op. 
+            </p>
+        </section>
+    </div>
+    <div id="skraddersyetBox" class="popBox">
+        <img onclick="openSkraddersyet()" class="closeIcon" src="assets/img/close.svg" alt="Lukke ikon">
+        <img class="pointIconPopBox" src="assets/img/punkt.svg" alt="Blad ikon">
+        <section>
+            <h1 class="popBoxh1">Skræddersyet</h1>
+            <p class="popBoxP">
+                I en skræddersyet kostplan, vil jeg beregne og udarbejde en kostplan ud fra dine præferencer. 
+                En skræddersyet kostplan kommer til at angive, hvor meget og mange kcal, 
+                du skal indtage i løbet af dagene. Når kostplanen, 
+                er skræddersyet på denne måde, betyder det derfor også, 
+                at den kun er tilpasse dine personlige behov og ikke fx. din samlever. 
+                Hvis dette er nået der ønskes, så er det to individuelle planer og 
+                eller så er man altid velkommen til at kontakte mig uforpligtende.
+            </p>
         </section>
     </div>
 <footer>
