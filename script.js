@@ -3,7 +3,7 @@ var showingMenu = false
 function openMenu() {
   // Fjerner eller tilføjer en class, ved at toggle
   var links = document.getElementById("myLinks")
-  links.classList.toggle("hideLinks")
+
   links.classList.toggle("showLinks")
 
   showingMenu = !showingMenu;
@@ -77,8 +77,6 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-
-
 // Denne token skal udskiftes med en ny token hver 2. måned 
 // Tokenet er fra d. 3 maj 2022
 var token = "IGQVJVTHNNcnFxYy1yeENuT3YzNjJYalRQWHQ3U2l1NXZAKaU1VTG51N0JBQlRGODk1U3NWVDc5VnVLMFJWMGNlSmV3WTN2eXdkcU1oLVl6SmdEQk1LY2R2MS0wLXIzU1MwcUR3aTlDd1ZAnRTctSUZAfdQZDZD"
@@ -124,10 +122,11 @@ function handleInstagramFeed(instagramFeed) {
 
 function openSundhed() {
   // Fjerner eller tilføjer en class, ved at toggle
-  var popBox = document.getElementById("sundhedBox")
+  let popBox = document.getElementById("sundhedBox")
   let blurBoxes = document.getElementsByClassName('popUpBlur');
 
   popBox.classList.toggle("popBox")
+
   for (let i = 0; i < blurBoxes.length; i++) {
     blurBoxes[i].classList.toggle('blur');
   }
@@ -135,10 +134,11 @@ function openSundhed() {
 
 function openErnaring() {
   // Fjerner eller tilføjer en class, ved at toggle
-  var popBox = document.getElementById("ernaringBox");
+  let popBox = document.getElementById("ernaringBox");
   let blurBoxes = document.getElementsByClassName('popUpBlur');
 
   popBox.classList.toggle("popBox")
+
   for (let i = 0; i < blurBoxes.length; i++) {
     blurBoxes[i].classList.toggle('blur');
   }
@@ -146,10 +146,11 @@ function openErnaring() {
 
 function openMotion() {
   // Fjerner eller tilføjer en class, ved at toggle
-  var popBox = document.getElementById("motionBox");
+  let popBox = document.getElementById("motionBox");
   let blurBoxes = document.getElementsByClassName('popUpBlur');
 
   popBox.classList.toggle("popBox")
+
   for (let i = 0; i < blurBoxes.length; i++) {
     blurBoxes[i].classList.toggle('blur');
   }
@@ -157,10 +158,11 @@ function openMotion() {
 
 function openSkraddersyet() {
   // Fjerner eller tilføjer en class, ved at toggle
-  var popBox = document.getElementById("skraddersyetBox");
+  let popBox = document.getElementById("skraddersyetBox");
   let blurBoxes = document.getElementsByClassName('popUpBlur');
 
   popBox.classList.toggle("popBox")
+
   for (let i = 0; i < blurBoxes.length; i++) {
     blurBoxes[i].classList.toggle('blur');
   }

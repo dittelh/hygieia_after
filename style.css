@@ -47,12 +47,12 @@ header{
     margin-right: 1%;
 }
 
-.hideLinks{
+#myLinks{
     display: none;
 }
 
 .showLinks{
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     background-color: #4D987D;
     width: 100%;
@@ -152,6 +152,7 @@ footer a{
         width: 8vw;
         height: 8vw;
     }
+
 
     #myLinks{
         display: flex;
