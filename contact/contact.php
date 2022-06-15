@@ -16,31 +16,31 @@ $message = $_POST['message'];
 // $toEmail = "neeliya@hygieia.dk";
 $toEmail = "dittehansen143@gmail.com";
 
-    // Subject for mail
-    $subject = "Kontaktform fra Hygieia.dk";
+// Subject for mail
+$subject = "Kontaktform fra Hygieia.dk";
 
-    // Message in mail
-    $mailMessage = "En kunde har udfyldt kontaktformen på Hygieia.dk.<br><br>
-                Navn: $name<br>
-                Email: $email<br>
-                Telefon nr.: $number<br>
-                Fødselsår: $birthYear<br>
-                Besked: $message<br><br>";
+// Message in mail
+$mailMessage = "En kunde har udfyldt kontaktformen på Hygieia.dk.<br><br>
+            Navn: $name<br>
+            Email: $email<br>
+            Telefon nr.: $number<br>
+            Fødselsår: $birthYear<br>
+            Besked: $message<br><br>";
 
-    // Prepare headers for mail
-    // $headers =  "From: Hygieia <info@hygieia.dk>\r\n";
-    $headers =  "From: Hygieia <ditte@devditte.dk>\r\n";
-    $headers .= "Reply-To: $name <$email>\r\n";
-    // $headers .= "Return-Path: Hygieia <info@hygieia.dk>\r\n";
-    $headers .= "Return-Path: Hygieia <ditte@devditte.dk>\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+// Prepare headers for mail
+// $headers =  "From: Hygieia <info@hygieia.dk>\r\n";
+$headers =  "From: Hygieia <ditte@devditte.dk>\r\n";
+$headers .= "Reply-To: $name <$email>\r\n";
+// $headers .= "Return-Path: Hygieia <info@hygieia.dk>\r\n";
+$headers .= "Return-Path: Hygieia <ditte@devditte.dk>\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-    // Send mail
-    if (mail($toEmail, $subject, $mailMessage, $headers) ) {
-     // Redirect back with success popup
-        header('Location: contact.html?success=1');
-    } else {
-        // Redirect back with success popup
-        header('Location: contact.html?success=0');
-    }
+// Send mail
+if (mail($toEmail, $subject, $mailMessage, $headers) ) {
+    // Redirect back with success popup
+    header('Location: contact.html?success=1');
+} else {
+    // Redirect back with success popup
+    header('Location: contact.html?success=0');
+}

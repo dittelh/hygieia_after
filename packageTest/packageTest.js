@@ -198,6 +198,10 @@ if(wasMailSent == "1"){
   }
 
 
+
+// Funktion til at definere om formen skal submittes
+// onsubmit="submitForm()" er sat på formen i html'en, hvilket betyder, at denne submitForm funktion bliver kørt når man submitter
+// Hvis funktionen returnerer false, bliver formen ikke sendt
 function submitForm(){
 
     // Input field
@@ -210,11 +214,12 @@ function submitForm(){
     let emailError = document.getElementById("emailError");
     let numberError = document.getElementById("numberError");
 
+    // Definerer om der er nogle input fejl
+    let noError = true;
+
     // Fjern fejlbeskeder, hvis de skulle være fremme fra et tidligere submit forsøg
     emailError.style = "display: none";
     numberError.style = "display: none";
-
-    let noError = true;
 
     // Tjek om emails er ens og at de er fyldt ud
     if(email.value !== emailConfirm.value || email.value === ""){

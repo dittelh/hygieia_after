@@ -1,3 +1,4 @@
+// Brugermenuen
 var showingMenu = false
 
 function openMenu() {
@@ -9,25 +10,32 @@ function openMenu() {
   showingMenu = !showingMenu;
 }
 
+
+
+// Funktion til når man klikker på det uden om den åbne burgermenu, så lukker menuen også
 window.onclick = ((event) => {
   let classes = event.target.classList
   let isShowLinks = false
   let isMenu = false
-  var menuIcon = document.getElementById("menu-icon")
+  let menuIcon = document.getElementById("menu-icon")
 
   for (let i = 0; i < classes.length; i++) {
+    // Tjekker om det element der klikkes på indeholder classen "showLinks"
     if (classes[i] == "showLinks"){
       isShowLinks = true
     }
+    // Tjekker om det element der klikkes på indeholder classen "menu-icon"
     if (classes[i] == "menu-icon"){
       isMenu = true
     }
   }
+  // ShowingMenu skal være true, isShowLinks skal være false og isMenu skal være false - før den toggle classen
   if (showingMenu && !isShowLinks && !isMenu) {
     openMenu()
     menuIcon.classList.toggle("active")
   } 
 })
+
 
 
 // Slideshowet er taget fra Dittes portfolio
@@ -69,8 +77,11 @@ function previousClient(){
 }
 
 
+
+// Funktion til instagram feede'ene
 let feedContainer = document.getElementById("feedContainer")
 
+// Tjekker om feedContainer er på documentet, hvis den ikke, er så har den ikke værdi
 if(feedContainer !== null){
 
 // Denne sektion af kode fra postman, som er et program til at arbejde med API'er, 
@@ -94,6 +105,7 @@ fetch("https://graph.instagram.com/v13.0/me/media?fields=id,media_url,permalink&
   // https://www.w3schools.com/js/js_json_parse.asp?fbclid=IwAR0IdcBPxPTi2ceGQSZiBRf9BbA9d_7kaFbh1Q5UmfuQDJLmqx0Mu-4kt4g
   // d. 1/6/2022
 function handleInstagramFeed(instagramFeed) {
+  // JSON.parse = parse gør, at vi JavaScripten kan håndtere JSON som et objekt og ikke bare en lang string
   let feed = JSON.parse(instagramFeed).data
 
     for (let i = 0; i < feed.length; i++) {
