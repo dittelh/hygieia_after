@@ -426,8 +426,11 @@ body{
     margin-top: 2%;
 }
 
-.edit p{
+.edit a {
+    text-decoration: none;
+    color: black;
     margin: 0;
+
 }
 
 .editIcon{
@@ -460,12 +463,18 @@ body{
     margin-bottom: 5%;
 }
 
-#lastConfirmSection label{
+#lastConfirmSection label, .errorMessage{
     text-align: center;
     font-family: Cormorant;
     font-size: 20px; 
     font-weight: 100;
     margin-bottom: 2%;
+}
+
+.errorMessage{
+    color: red;
+    margin: 0 auto !important;
+    display: none;
 }
 
 #lastConfirmSection input{
@@ -661,7 +670,7 @@ footer{
 
     /* Diseases */
 
-    .diseases{
+    #diseasesContainer{
         scroll-margin-top: 15vw;
     }
 
@@ -716,7 +725,7 @@ footer{
         scroll-margin-top: 10vw;
     }
 
-    #lastConfirmSection label{
+    #lastConfirmSection label, .errorMessage{
         font-size: 24px; 
         font-weight: 100;
         margin-bottom: 0.5%;

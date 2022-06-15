@@ -69,6 +69,9 @@ function previousClient(){
 }
 
 
+let feedContainer = document.getElementById("feedContainer")
+
+if(feedContainer !== null){
 
 // Denne sektion af kode fra postman, som er et program til at arbejde med API'er, 
 // som vi skal bruge til at hente instagram billeder ud af
@@ -79,7 +82,7 @@ var requestOptions = {
 
 // Denne token skal udskiftes med en ny token hver 2. måned 
 // Tokenet er fra d. 3 maj 2022
-var token = "IGQVJVTHNNcnFxYy1yeENuT3YzNjJYalRQWHQ3U2l1NXZAKaU1VTG51N0JBQlRGODk1U3NWVDc5VnVLMFJWMGNlSmV3WTN2eXdkcU1oLVl6SmdEQk1LY2R2MS0wLXIzU1MwcUR3aTlDd1ZAnRTctSUZAfdQZDZD"
+var token = "IGQVJYNU02ZADQ0cWNkcWFyOTNtUVBEUl9FYVRYNGFfUjJuS2x5ZAlBkbzg3cno4aHZAzaURBNzV0QUtaQ1dMNlhvX3dDNENudkhMcXhoOHYybjdGVEJMeTE5ZAFBBNDJFN3IzTVdQVUNHZA1kwMTNfVW1XYgZDZD"
 
 fetch("https://graph.instagram.com/v13.0/me/media?fields=id,media_url,permalink&access_token="+token+"&limit=10", requestOptions)
   .then(response => response.text())
@@ -92,9 +95,7 @@ fetch("https://graph.instagram.com/v13.0/me/media?fields=id,media_url,permalink&
   // d. 1/6/2022
 function handleInstagramFeed(instagramFeed) {
   let feed = JSON.parse(instagramFeed).data
-  let feedContainer = document.getElementById("feedContainer")
 
-  if(feedContainer !== null){
     for (let i = 0; i < feed.length; i++) {
       var newA = document.createElement("a")
       newA.href = feed[i].permalink

@@ -50,7 +50,7 @@
     </header>
     <section id="testSection">
         <h1>Forløbstesten</h1>
-        <form id="testForm" action="">
+        <form id="testForm" name="testForm" action="packageTest.php" method="post" onsubmit="return submitForm()">
             <!-- Gender -->
             <div id="gender">
                 <label class="questions" for="gender">Vælg dit køn:</label>
@@ -59,7 +59,7 @@
                         <img class="genderImg" src="../assets/img/man-icon.svg" alt="Mande ikon">
                         <div class="genderCheck man">
                             <label class="checkboxContainer">
-                                <input required name="gender" type="radio" class="checkPrivacy">
+                                <input required name="gender" type="radio" class="checkPrivacy" id="man" value="Mand">
                                 <span class="checkmark"></span>
                             </label>
                             <p>Mand</p>
@@ -69,7 +69,7 @@
                         <img class="genderImg" src="../assets/img/woman-icon.svg" alt="Kvinde ikon">
                         <div class="genderCheck woman">
                             <label class="checkboxContainer">
-                                <input required name="gender" type="radio" class="checkPrivacy">
+                                <input required name="gender" type="radio" class="checkPrivacy" id="woman" value="Kvinde">
                                 <span class="checkmark"></span>
                             </label>
                             <p>Kvinde</p>
@@ -82,35 +82,37 @@
             <!-- Facts -->
             <div class="facts" id="facts">
                 <label for="weight">Hvad er din vægt?</label>
-                <input type="text" name="weight" id="weight">
+                <input placeholder="Vægt i kg" type="text" name="weight" id="weight" required>
                 <label for="age">Hvad er din alder?</label>
-                <input type="text" name="age" id="age">
+                <input placeholder="Alder i år" type="text" name="age" id="age" required>
                 <label for="height">Hvor høj er du?</label>
-                <input type="text" name="height" id="height">
+                <input placeholder="Højde i cm" type="text" name="height" id="height" required>
                 <a href="#activity" class="btn submitBtn">Næste</a>
             </div>
             <!-- Activity -->
             <div class="activity" id="activity">
-                <label for="activity">Hvad er dit aktivitetsniveau?</label>
+                <label for="activity">Hvor aktiv er du?</label>
                 <div>
                     <div id="rangeP">
+                        <p>Slet ikke</p>
                         <p>Lidt</p>
                         <p>Moderat</p>
                         <p>Meget</p>
+                        <p>Ekstremt</p>
                     </div>
                     <input class="slider" type="range" id="points" name="points" min="0" max="4">
                 </div>
                 <label id="activityExtra" for="activ">Hvad er du aktiv med?</label>
-                <input type="text" name="activ" id="activ">
-                <a href="#wishWeight" class="btn submitBtn">Næste</a>
+                <input type="text" name="activ" id="activ" required>
+                <a href="#wishWeightContainer" class="btn submitBtn">Næste</a>
             </div>
             <!-- Wish weight -->
-            <div class="wishWeight" id="wishWeight">
-                <label id="wishWeight" for="wishWeight">Hvad ønsker du, at din vægt skal være?</label>
-                <input type="text" name="wishWeight" id="wishWeight">
+            <div class="wishWeight" id="wishWeightContainer">
+                <label for="wishWeight">Hvad ønsker du, at din vægt skal være?</label>
+                <input type="text" id="wishWeight" name="wishWeight" placeholder="Vægt i kg" required>
                 <div class="dontKnowCheck">
                     <label class="checkboxContainer centerCheck">
-                        <input required type="checkbox" class="checkPrivacy">
+                        <input value="Ved ikke" id="dontKnow" type="checkbox" class="checkPrivacy">
                         <span class="checkmark noCheck"></span>
                     </label>
                     <p>Ved ikke</p>
@@ -122,34 +124,36 @@
                 <label for="motivation">Hvor motiveret er du for at nå målet?</label>
                 <div>
                     <div id="rangeP">
+                        <p>Slet ikke</p>
                         <p>Lidt</p>
                         <p>Moderat</p>
                         <p>Meget</p>
+                        <p>Ekstremt</p>
                     </div>
-                    <input class="slider" type="range" id="points" name="points" min="0" max="4">
+                    <input class="slider" type="range" id="motivationPoints" name="motivationPoints" min="0" max="4">
                 </div>
-                <a href="#allergy" class="btn submitBtn">Næste</a>
+                <a href="#allergyContainer" class="btn submitBtn">Næste</a>
             </div>
             <!-- allergy -->
-            <div class="allergy" id="allergy">
-                <label id="allergy" for="allergy">Har du nogle allergener, som jeg skal vide noget om?</label>
-                <input type="text" name="allergy" id="allergy">
+            <div class="allergy" id="allergyContainer">
+                <label for="allergy">Har du nogle allergener, som jeg skal vide noget om?</label>
+                <input type="text" required name="allergy" id="allergy">
                 <div class="dontKnowCheck">
                     <label class="checkboxContainer centerCheck">
-                        <input required type="checkbox" class="checkPrivacy">
+                        <input value="Nej" id="noAllergy" type="checkbox" class="checkPrivacy" >
                         <span class="checkmark noCheck"></span>
                     </label>
                     <p>Nej</p>
                 </div>  
-                <a href="#diseases" class="btn submitBtn">Næste</a>
+                <a href="#diseasesContainer" class="btn submitBtn">Næste</a>
             </div>
             <!-- diseases -->
-            <div class="diseases" id="diseases">
-                <label id="diseases" for="diseases">Har du nogle sygdomme, som jeg skal kende til?</label>
+            <div class="diseases" id="diseasesContainer">
+                <label for="diseases">Har du nogle sygdomme, som jeg skal kende til?</label>
                 <input type="text" name="diseases" id="diseases">
                 <div class="dontKnowCheck">
                     <label class="checkboxContainer centerCheck">
-                        <input required type="checkbox" class="checkPrivacy">
+                        <input value="Nej" id="noDiseases" type="checkbox" class="checkPrivacy">
                         <span class="checkmark noCheck"></span>
                     </label>
                     <p>Nej</p>
@@ -162,90 +166,100 @@
                 <div class="factsSection facts1">
                     <div>
                         <p class="topic">Dit køn:</p>
-                        <p>Kvinde</p>
+                        <p id="genderPicked"></p>
                     </div>
                     <div class="edit">
-                        <p>Ret</p>
+                        <a href="#testSection">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
                 <div class="factsSection facts2">
                     <div>
                         <p class="topic">Din vægt:</p>
-                        <p>78 kg</p>
+                        <p id="weightPicked"></p>
                     </div>
                     <div class="edit">
-                        <p>Ret</p>
+                        <a href="#facts">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
                 <div class="factsSection facts1">
                     <div>
                         <p class="topic">Din alder:</p>
-                        <p>54 år</p>
+                        <p id="agePicked"></p>
                     </div>
                     <div class="edit">
-                        <p>Ret</p>
+                        <a href="#facts">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
                 <div class="factsSection facts2">
                     <div>
                         <p class="topic">Din højde:</p>
-                        <p>168 cm</p>
+                        <p id="heightPicked"></p>
                     </div>
                     <div class="edit">
-                        <p>Ret</p>
+                        <a href="#facts">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
                 <div class="factsSection facts1">
                     <div>
                         <p class="topic">Aktivitetsniveau:</p>
-                        <p>Middel</p>
+                        <p id="activityPicked"></p>
                     </div>
                     <div class="edit">
-                        <p>Ret</p>
+                        <a href="#activity">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
                 <div class="factsSection facts2">
+                    <div>
+                        <p class="topic">Aktiv med:</p>
+                        <p id="activPicked"></p>
+                    </div>
+                    <div class="edit">
+                        <a href="#activity">Ret</a>
+                        <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
+                    </div>
+                </div>
+                <div class="factsSection facts1">
                     <div>
                         <p class="topic">Din ønsket vægt:</p>
-                        <p>68 kg</p>
+                        <p id="wishWeightPicked"></p>
                     </div>
                     <div class="edit">
-                        <p>Ret</p>
-                        <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
-                    </div>
-                </div>
-                <div class="factsSection facts1">
-                    <div>
-                        <p class="topic">Motivationsniveau:</p>
-                        <p>Middel</p>
-                    </div>
-                    <div class="edit">
-                        <p>Ret</p>
+                        <a href="#wishWeightContainer">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
                 <div class="factsSection facts2">
                     <div>
-                        <p class="topic">Allergener:</p>
-                        <p>Nej</p>
+                        <p class="topic">Motivationsniveau:</p>
+                        <p id="motivationPicked"></p>
                     </div>
                     <div class="edit">
-                        <p>Ret</p>
+                        <a href="#motivation">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
                 <div class="factsSection facts1">
                     <div>
-                        <p class="topic">Sygdomme:</p>
-                        <p>Nej</p>
+                        <p class="topic">Allergener:</p>
+                        <p id="allergyPicked"></p>
                     </div>
                     <div class="edit">
-                        <p>Ret</p>
+                        <a href="#allergyContainer">Ret</a>
+                        <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
+                    </div>
+                </div>
+                <div class="factsSection facts2">
+                    <div>
+                        <p class="topic">Sygdomme:</p>
+                        <p id="diseasesPicked"></p>
+                    </div>
+                    <div class="edit">
+                        <a href="#diseasesContainer">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -259,13 +273,17 @@
                 <input required type="email" id="email" name="email">
 
                 <label for="confirmEmail">Bekræft e-mail</label>
-                <input required type="email" id="email" name="email">
+                <input required type="email" id="emailConfirm">
+
+                <p class="errorMessage" id="emailError">De to mails er ikke ens</p>
 
                 <label for="number">Telefonnummer</label>
                 <input required type="number" id="number" name="number">
 
                 <label for="number">Bekræft telefonnummer</label>
-                <input required type="number" id="number" name="number">
+                <input required type="number" id="numberConfirm">
+
+                <p class="errorMessage" id="numberError">De to telefonnummre er ikke ens</p>
 
                 <div class="confirmCheck">
                     <label class="checkboxContainer">
@@ -275,7 +293,7 @@
                     <p>Klik her for at acceptere brugen er personoplysninger.
                         Læs mere <a href="../privacyPolicy/privacyPolicy.html">her</a></p>
                 </div>
-                <button type="submit" class="btn submitBtn">Send testen</button>
+                <button type="submit" class="btn submitBtn" onclick="submitForm()">Send testen</button>
             </section>
         </form>
         <img onclick="ScrollUp()" id="arrowUp" src="../assets/img/arrowUp.svg" alt="Pil op">

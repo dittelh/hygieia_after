@@ -20,7 +20,7 @@ $toEmail = "dittehansen143@gmail.com";
     $subject = "Kontaktform fra Hygieia.dk";
 
     // Message in mail
-    $message = "En kunde har udfyldt kontaktformen på Hygieia.dk.<br><br>
+    $mailMessage = "En kunde har udfyldt kontaktformen på Hygieia.dk.<br><br>
                 Navn: $name<br>
                 Email: $email<br>
                 Telefon nr.: $number<br>
@@ -37,7 +37,7 @@ $toEmail = "dittehansen143@gmail.com";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
     // Send mail
-    if (mail($toEmail, $subject, $message, $headers) ) {
+    if (mail($toEmail, $subject, $mailMessage, $headers) ) {
      // Redirect back with success popup
         header('Location: contact.html?success=1');
     } else {
