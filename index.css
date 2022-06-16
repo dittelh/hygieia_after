@@ -153,6 +153,7 @@
     font-size: 20px; 
 }
 
+
 .closeIcon{
     width: 10vw;
     height: 10vw;
@@ -174,7 +175,7 @@
 
 .blur{
     filter: blur(5px);
-  }
+}
 
 
 /* Package test section */

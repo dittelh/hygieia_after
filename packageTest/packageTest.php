@@ -52,41 +52,41 @@ if($motivationPoints == "0"){
 // $toEmail = "neeliya@hygieia.dk";
 $toEmail = "dittehansen143@gmail.com";
 
-    // Subject for mail
-    $subject = "Testform fra Hygieia.dk";
+// Subject for mail
+$subject = "Testform fra Hygieia.dk";
 
-    // Message in mail
-    $message = "En kunde har udfyldt testen på Hygieia.dk og vil gerne have et forløb.<br><br>
-                Email: $email<br>
-                Telefon nr.: $number<br><br><br>
-                
-                Testens værdier:<br><br>
-                Køn: $gender<br>
-                Vægt: $weight<br>
-                Alder: $age<br>
-                Højde: $height<br>
-                Aktivitetsniveau: $points<br>
-                Aktiv med: $activ<br>
-                Ønskede vægt: $wishWeight<br>
-                Motivationsniveau: $motivationPoints<br>
-                Allergier: $allergy<br>
-                Sygdomme: $diseases<br>
-                ";
+// Message in mail
+$message = "En kunde har udfyldt testen på Hygieia.dk og vil gerne have et forløb.<br><br>
+            Email: $email<br>
+            Telefon nr.: $number<br><br><br>
+            
+            Testens værdier:<br><br>
+            Køn: $gender<br>
+            Vægt: $weight<br>
+            Alder: $age<br>
+            Højde: $height<br>
+            Aktivitetsniveau: $points<br>
+            Aktiv med: $activ<br>
+            Ønskede vægt: $wishWeight<br>
+            Motivationsniveau: $motivationPoints<br>
+            Allergier: $allergy<br>
+            Sygdomme: $diseases<br>
+            ";
 
-    // Prepare headers for mail
-    // $headers =  "From: Hygieia <info@hygieia.dk>\r\n";
-    $headers =  "From: Hygieia <ditte@devditte.dk>\r\n";
-    $headers .= "Reply-To: $name <$email>\r\n";
-    // $headers .= "Return-Path: Hygieia <info@hygieia.dk>\r\n";
-    $headers .= "Return-Path: Hygieia <ditte@devditte.dk>\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+// Prepare headers for mail
+// $headers =  "From: Hygieia <info@hygieia.dk>\r\n";
+$headers =  "From: Hygieia <ditte@devditte.dk>\r\n";
+$headers .= "Reply-To: $name <$email>\r\n";
+// $headers .= "Return-Path: Hygieia <info@hygieia.dk>\r\n";
+$headers .= "Return-Path: Hygieia <ditte@devditte.dk>\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-    // Send mail
-    if (mail($toEmail, $subject, $message, $headers) ) {
-     // Redirect back with success popup
-        header('Location: packageTest.html?success=1');
-    } else {
-        // Redirect back with success popup
-        header('Location: packageTest.html?success=0');
-    }
+// Send mail
+if (mail($toEmail, $subject, $message, $headers) ) {
+    // Redirect back with success popup
+    header('Location: packageTest.html?success=1');
+} else {
+    // Redirect back with success popup
+    header('Location: packageTest.html?success=0');
+}

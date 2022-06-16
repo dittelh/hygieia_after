@@ -3,7 +3,7 @@ var showingMenu = false
 
 function openMenu() {
   // Fjerner eller tilføjer en class, ved at toggle
-  var links = document.getElementById("myLinks")
+  let links = document.getElementById("myLinks")
 
   links.classList.toggle("showLinks")
 
@@ -35,6 +35,7 @@ window.onclick = ((event) => {
     menuIcon.classList.toggle("active")
   } 
 })
+
 
 
 
@@ -108,6 +109,7 @@ function handleInstagramFeed(instagramFeed) {
   // JSON.parse = parse gør, at vi JavaScripten kan håndtere JSON som et objekt og ikke bare en lang string
   let feed = JSON.parse(instagramFeed).data
 
+  console.log(instagramFeed)
     for (let i = 0; i < feed.length; i++) {
       var newA = document.createElement("a")
       newA.href = feed[i].permalink
@@ -116,7 +118,6 @@ function handleInstagramFeed(instagramFeed) {
       newA.title = "Klik for at se Instagram billedet"
       feedContainer.appendChild(newA)
       
-
 
       var newImg = document.createElement("img")
       newImg.src = feed[i].media_url
