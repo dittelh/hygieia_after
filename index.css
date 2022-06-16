@@ -93,6 +93,9 @@
     top: 15%;
     left: 0%;
     background-color: white;
+    height: 120vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #ernaringBox{
@@ -104,6 +107,9 @@
     top: 15%;
     left: 0%;
     background-color: white;
+    height: 120vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #motionBox{
@@ -165,8 +171,8 @@
     width: 10vw;
     height: 10vw;
     position: absolute;
-    right: -5vw;
-    top: -5vw;
+    right: 5vw;
+    top: 5vw;
 }
 
 .popBox{
