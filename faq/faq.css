@@ -56,14 +56,14 @@
     padding-left: 5%;
     padding-right: 5%;
     margin-top: 3%;
-    display: block; 
+    display: none; 
     font-family: Cormorant;
     font-size: 20px;
     margin-bottom: 6%;
 }
 
-.hideAnswer{
-    display: none;
+.showAnswer{
+    display: block;
 }
 
 
@@ -108,11 +108,5 @@
         padding-left: 5%;
         padding-right: 5%;
         margin-top: 0%;
-        display: block; 
     }
-    
-    .hideAnswer{
-        display: none;
-    }
-
 }
