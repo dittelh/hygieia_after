@@ -1,6 +1,7 @@
 // Brugermenuen
 var showingMenu = false
 
+
 function openMenu() {
   // Fjerner eller tilføjer en class, ved at toggle
   let links = document.getElementById("myLinks")
@@ -10,7 +11,11 @@ function openMenu() {
   showingMenu = !showingMenu;
 }
 
-
+// Pop up bokse variabler
+var showingSundhed = false
+var showingErnaring = false
+var showingMotion = false
+var showingSkraddersyet = false
 
 // Funktion til når man klikker på det uden om den åbne burgermenu, så lukker menuen også
 window.onclick = ((event) => {
@@ -18,6 +23,12 @@ window.onclick = ((event) => {
   let isShowLinks = false
   let isMenu = false
   let menuIcon = document.getElementById("menu-icon")
+
+  let popUpSundhed = false
+  let popUpErnaring = false
+  let popUpMotion = false
+  let popUpSkraddersyet = false
+
 
   for (let i = 0; i < classes.length; i++) {
     // Tjekker om det element der klikkes på indeholder classen "showLinks"
@@ -28,14 +39,39 @@ window.onclick = ((event) => {
     if (classes[i] == "menu-icon"){
       isMenu = true
     }
+
+    if (classes[i] == "popUpSundhed" || classes[i] == "closeIcon" || classes[i] == "pointIconPopBox" || classes[i] == "popBoxh1" || classes[i] == "popBoxP" || classes[i] == "linkText"){
+      popUpSundhed = true
+    }
+    if (classes[i] == "popUpErnaring" || classes[i] == "closeIcon" || classes[i] == "pointIconPopBox" || classes[i] == "popBoxh1" || classes[i] == "popBoxP" || classes[i] == "linkText"){
+      popUpErnaring = true
+    }
+    if (classes[i] == "popUpMotion" || classes[i] == "closeIcon" || classes[i] == "pointIconPopBox" || classes[i] == "popBoxh1" || classes[i] == "popBoxP" || classes[i] == "linkText"){
+      popUpMotion = true
+    }
+    if (classes[i] == "popUpSkraddersyet" || classes[i] == "closeIcon" || classes[i] == "pointIconPopBox" || classes[i] == "popBoxh1" || classes[i] == "popBoxP" || classes[i] == "linkText"){
+      popUpSkraddersyet = true
+    }
   }
   // ShowingMenu skal være true, isShowLinks skal være false og isMenu skal være false - før den toggle classen
   if (showingMenu && !isShowLinks && !isMenu) {
     openMenu()
     menuIcon.classList.toggle("active")
   } 
-})
 
+  if (!popUpSundhed && showingSundhed) {
+    openSundhed()
+  }
+  if (!popUpErnaring && showingErnaring) {
+    openErnaring()
+  }
+  if (!popUpMotion && showingMotion) {
+    openMotion()
+  }
+  if (!popUpSkraddersyet && showingSkraddersyet) {
+    openSkraddersyet()
+  }
+})
 
 
 
@@ -144,6 +180,8 @@ function openSundhed() {
   for (let i = 0; i < blurBoxes.length; i++) {
     blurBoxes[i].classList.toggle('blur');
   }
+
+  showingSundhed = !showingSundhed
 }
 
 function openErnaring() {
@@ -156,6 +194,8 @@ function openErnaring() {
   for (let i = 0; i < blurBoxes.length; i++) {
     blurBoxes[i].classList.toggle('blur');
   }
+
+  showingErnaring = !showingErnaring
 }
 
 function openMotion() {
@@ -168,6 +208,8 @@ function openMotion() {
   for (let i = 0; i < blurBoxes.length; i++) {
     blurBoxes[i].classList.toggle('blur');
   }
+
+  showingMotion = !showingMotion
 }
 
 function openSkraddersyet() {
@@ -180,4 +222,6 @@ function openSkraddersyet() {
   for (let i = 0; i < blurBoxes.length; i++) {
     blurBoxes[i].classList.toggle('blur');
   }
+
+  showingSkraddersyet = !showingSkraddersyet
 }
