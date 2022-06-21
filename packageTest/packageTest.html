@@ -82,11 +82,11 @@
             <!-- Facts -->
             <div class="facts" id="facts">
                 <label for="weight">Hvad er din vægt?</label>
-                <input placeholder="Vægt i kg" type="text" name="weight" id="weight" required>
+                <input placeholder="Vægt i kg" type="number" name="weight" id="weight" required>
                 <label for="age">Hvad er din alder?</label>
-                <input placeholder="Alder i år" type="text" name="age" id="age" required>
+                <input placeholder="Alder i år" type="number" name="age" id="age" required>
                 <label for="height">Hvor høj er du?</label>
-                <input placeholder="Højde i cm" type="text" name="height" id="height" required>
+                <input placeholder="Højde i cm" type="number" name="height" id="height" required>
                 <a href="#activity" class="btn submitBtn">Næste</a>
             </div>
             <!-- Activity -->
@@ -169,7 +169,7 @@
                         <p id="genderPicked"></p>
                     </div>
                     <div class="edit">
-                        <a href="#testSection">Ret</a>
+                        <a href="#testSection" class="editBtn">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                         <p id="weightPicked"></p>
                     </div>
                     <div class="edit">
-                        <a href="#facts">Ret</a>
+                        <a href="#facts" class="editBtn">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -189,7 +189,7 @@
                         <p id="agePicked"></p>
                     </div>
                     <div class="edit">
-                        <a href="#facts">Ret</a>
+                        <a href="#facts" class="editBtn">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                         <p id="heightPicked"></p>
                     </div>
                     <div class="edit">
-                        <a href="#facts">Ret</a>
+                        <a href="#facts" class="editBtn">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -209,7 +209,7 @@
                         <p id="activityPicked"></p>
                     </div>
                     <div class="edit">
-                        <a href="#activity">Ret</a>
+                        <a href="#activity" class="editBtn">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -219,7 +219,7 @@
                         <p id="activPicked"></p>
                     </div>
                     <div class="edit">
-                        <a href="#activity">Ret</a>
+                        <a href="#activity" class="editBtn">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -229,7 +229,7 @@
                         <p id="wishWeightPicked"></p>
                     </div>
                     <div class="edit">
-                        <a href="#wishWeightContainer">Ret</a>
+                        <a href="#wishWeightContainer" class="editBtn">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -239,7 +239,7 @@
                         <p id="motivationPicked"></p>
                     </div>
                     <div class="edit">
-                        <a href="#motivation">Ret</a>
+                        <a href="#motivation" class="editBtn">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -249,7 +249,7 @@
                         <p id="allergyPicked"></p>
                     </div>
                     <div class="edit">
-                        <a href="#allergyContainer">Ret</a>
+                        <a href="#allergyContainer" class="editBtn">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -259,7 +259,7 @@
                         <p id="diseasesPicked"></p>
                     </div>
                     <div class="edit">
-                        <a href="#diseasesContainer">Ret</a>
+                        <a href="#diseasesContainer" class="editBtn">Ret</a>
                         <img class="editIcon" src="../assets/img/edit-icon.svg" alt="Rette ikon">
                     </div>
                 </div>
@@ -297,6 +297,7 @@
             </section>
         </form>
         <img onclick="ScrollUp()" id="arrowUp" src="../assets/img/arrowUp.svg" alt="Pil op">
+        <img onclick="ScrollDown()" id="arrowDown" src="../assets/img/arrowUp.svg" alt="Pil ned">
     </section>
 <footer>
     <div>

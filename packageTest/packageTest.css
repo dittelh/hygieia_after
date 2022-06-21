@@ -306,11 +306,28 @@ body{
 
 #arrowUp{
     position: fixed;
-    bottom: 4%;
+    bottom: 12%;
     right: 2%;
     z-index: 3;
 }
 
+#arrowDown{
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    z-index: 3;
+    transform: rotate(180deg);
+    display: none;
+}
+
+#arrowUp:hover,
+#arrowDown:hover{
+    cursor: pointer;
+}
+
+.arrowDownShow{
+    display: unset !important;
+}
 
 
 /* Checkbox */

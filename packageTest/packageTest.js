@@ -2,7 +2,6 @@ function ScrollUp(){
     scroll(0, 0);
 }
 
-
 // Gender section
 
 var genderPicked = document.getElementById("genderPicked")
@@ -180,6 +179,19 @@ noDiseases.addEventListener("click", (event) => {
     }
 })
 
+
+// Lytter på om man klikker på en class der indeholder editBtn, hvis der er det, så skal den tilføje pilen ned
+const editBtn = document.getElementsByClassName("editBtn")
+for (let i = 0; i < editBtn.length; i++) {
+    editBtn[i].addEventListener("click", (event) =>{
+        let arrowDown = document.getElementById("arrowDown")
+        arrowDown.classList.add("arrowDownShow")
+    })
+}
+
+function ScrollDown(){
+    document.getElementById("confirmSection").scrollIntoView()
+}
 
 // Mail response
 // Koden er taget fra https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
